@@ -55,7 +55,8 @@ public class AutenticacionController {
             System.out.println("Respuesta backend: " + fechaLogout);
 
             if (fechaLogout == null) {
-                return new LogoutResponseDTO(false, null, "Error: No se pudo registrar auditoría");
+                return new LogoutResponseDTO(false, null, "Error: " +
+                        "No se pudo registrar auditoría");
             }
             return new LogoutResponseDTO(true, fechaLogout, "");
 
